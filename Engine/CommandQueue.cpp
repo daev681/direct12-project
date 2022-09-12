@@ -46,7 +46,7 @@ void CommandQueue::WaitSync()
 	// Add an instruction to the command queue to set a new fence point.  Because we 
 	// are on the GPU timeline, the new fence point won't be set until the GPU finishes
 	// processing all the commands prior to this Signal().
-	_cmdQueue->Signal(_fence.Get(), _fenceValue);
+	_cmdQueue->Signal(_fence.Get(), _fenceValue); 
 
 	// Wait until the GPU has completed commands up to this fence point.
 	if (_fence->GetCompletedValue() < _fenceValue)
