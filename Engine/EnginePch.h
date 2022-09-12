@@ -58,5 +58,3 @@ struct WindowInfo
 };
 
 extern unique_ptr<class Engine> GEngine;
-
-void HelloEngine();
